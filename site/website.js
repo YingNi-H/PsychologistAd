@@ -4,26 +4,32 @@ window.addEventListener("load", function () {
     const BASE_URL = "https://sporadic.nz/a01-parttime";
 
     // TODO Your code here.
+    document.querySelector("#randomePokemonImage").src = "";
     displayRandomePokemon();
     getTypesTable();
 
-    //Click event
+    //Randome button-new randome pokemon
     document.querySelector("#btnRandome").addEventListener("click", displayRandomePokemon);
+    
 
     //Fetch a randome Pokemon from server
     async function displayRandomePokemon(){
         let getRandomePokemon = await fetch(`https://trex-sandwich.com/auckland-online-cs719-assignment-01/services/pokemon/summary/random`);
         let responseGetRandomePokemon = await getRandomePokemon.json();
-        console.log(`responseGetRandomePokemon:${responseGetRandomePokemon}`);
+        console.log(`#btnRandome:${responseGetRandomePokemon.id}`);
 
         //Display the randome Pokemon's image and information in the card
         document.querySelector("#randomePokemonImage").src = `https://trex-sandwich.com/auckland-online-cs719-assignment-01/images/${responseGetRandomePokemon.imageUrl}`;
         document.querySelector("#randomePokemonName").innerHTML = responseGetRandomePokemon.name;
         let typeArray = responseGetRandomePokemon.types;
+
+        //Call type diaplay function
         displayType(typeArray);
-        document.querySelector("#btnMoreInfo").addEventListener("click", function(){
-            getPokemonIdDetails(responseGetRandomePokemon.id);
-        });
+        typeArray = null;
+
+        //MoreInfo button-pokemon pop up 
+        document.querySelector("#btnMoreInfo").addEventListener("click", getPokemonIdDetails(responseGetRandomePokemon.id)); 
+        responseGetRandomePokemon.id = null;
         
 
     }
@@ -39,6 +45,7 @@ window.addEventListener("load", function () {
 
 
         });
+        
 
     }
     
@@ -75,14 +82,11 @@ window.addEventListener("load", function () {
             rowBody.innerHTML += `<td>${typesData.data[i]}</td>`;
 
         }
-        
-
 
     }
 
     //Modal pop-up display
     async function getPokemonIdDetails(pokemonId){
-        
         let theIdPokemon = await fetch(`https://trex-sandwich.com/auckland-online-cs719-assignment-01/services/pokemon/detail/${pokemonId}`);
         let responseTheIdPokemon = await theIdPokemon.json();
 
@@ -90,9 +94,17 @@ window.addEventListener("load", function () {
         document.querySelector("#modalImage").src = `https://trex-sandwich.com/auckland-online-cs719-assignment-01/images/${responseTheIdPokemon.imageUrl}`; 
         document.querySelector("#descriptionP").innerHTML = responseTheIdPokemon.description;
 
-        //Display types:
-        typeDisplay = document.querySelector("#typeP");
-        displayType(responseTheIdPokemon.types);
+        //Display modal types- Reuse code but bugs
+        // typeDisplay = document.querySelector("#typeP");
+        // displayType(responseTheIdPokemon.types);
+
+        //Display modal types
+        const typeP = document.querySelector("#typeP");
+        typeP.innerHTML = `<strong>Types:</strong> `;
+        responseTheIdPokemon.types.forEach(function(item){
+            typeP.innerHTML += `${item}  `;
+
+        });
 
 
     }
