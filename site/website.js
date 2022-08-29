@@ -7,6 +7,9 @@ window.addEventListener("load", function () {
     displayRandomePokemon();
     getTypesTable();
 
+    //Click event
+    document.querySelector("#btnRandome").addEventListener("click", displayRandomePokemon);
+
     //Fetch a randome Pokemon from server
     async function displayRandomePokemon(){
         let getRandomePokemon = await fetch(`https://trex-sandwich.com/auckland-online-cs719-assignment-01/services/pokemon/summary/random`);
@@ -18,21 +21,19 @@ window.addEventListener("load", function () {
         document.querySelector("#randomePokemonName").innerHTML = responseGetRandomePokemon.name;
         let typeArray = responseGetRandomePokemon.types;
         displayType(typeArray);
-
+        document.querySelector("#btnMoreInfo").addEventListener("click", function(){
+            getPokemonIdDetails(responseGetRandomePokemon.id);
+        });
+        
 
     }
 
-    document.querySelector("#btnRandome").addEventListener("click", displayRandomePokemon);
+    
 
     //Show the randome Pokemon's type
+    let typeDisplay = document.querySelector("#randomePokemonType");
     function displayType(typeArray){
-        let typeDisplay = document.querySelector("#randomePokemonType");
         typeDisplay.innerHTML = `<strong>Types:</strong> `;
-
-        // if(typeDisplay.innerHTML != ""){
-        //     typeDisplay.innerHTML == "";
-
-        // }
         typeArray.forEach(function(item){
             typeDisplay.innerHTML += `${item}  `;
 
@@ -75,6 +76,23 @@ window.addEventListener("load", function () {
 
         }
         
+
+
+    }
+
+    //Modal pop-up display
+    async function getPokemonIdDetails(pokemonId){
+        
+        let theIdPokemon = await fetch(`https://trex-sandwich.com/auckland-online-cs719-assignment-01/services/pokemon/detail/${pokemonId}`);
+        let responseTheIdPokemon = await theIdPokemon.json();
+
+        document.querySelector("#modalTitle").innerHTML = responseTheIdPokemon.name;
+        document.querySelector("#modalImage").src = `https://trex-sandwich.com/auckland-online-cs719-assignment-01/images/${responseTheIdPokemon.imageUrl}`; 
+        document.querySelector("#descriptionP").innerHTML = responseTheIdPokemon.description;
+
+        //Display types:
+        typeDisplay = document.querySelector("#typeP");
+        displayType(responseTheIdPokemon.types);
 
 
     }

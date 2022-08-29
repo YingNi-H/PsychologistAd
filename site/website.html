@@ -139,7 +139,7 @@
                                 <h3 class="card-title text-danger float-end">Card</h3><br>
                                 <p id="randomePokemonType" class="card-text "><strong>Types:</strong> Electric</p>
                                 <div class="d-flex justify-content-around">
-                                    <a href="#" class="btn btn-primary p-1">More info</a>    
+                                    <a href="#" id="btnMoreInfo" class="btn btn-primary p-1" data-bs-toggle="modal" data-bs-target="#myModal">More info</a>    
                                     <a href="#" id="btnRandome" class="btn btn-secondary p-1">Randomize</a>
                                 </div>
                             </div> 
@@ -147,6 +147,35 @@
                     </div>
                 </div>
               </div>
+          </div>
+          <div class="modal" id="myModal">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                        <h4 id="modalTitle" class="modal-title">Modal Heading</h4>
+                        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal"></button> -->
+                        </div>
+                
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <img id="modalImage" class="mx-auto d-block" src="./images/pikachu.png">
+                            <p id="typeP" class="text-center">Bla
+
+                            </p>
+                            <p id="descriptionP">Bla
+
+                            </p>
+                        </div>
+                
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        </div>
+                
+                    </div>
+                </div>
           </div>
 
     </div>
