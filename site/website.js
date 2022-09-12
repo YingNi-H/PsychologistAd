@@ -94,7 +94,7 @@ window.addEventListener("load", function () {
         document.querySelector("#modalImage").src = `https://trex-sandwich.com/auckland-online-cs719-assignment-01/images/${responseTheIdPokemon.imageUrl}`; 
         document.querySelector("#descriptionP").innerHTML = responseTheIdPokemon.description;
 
-        //Display modal types- Reuse code but bugs
+        //Display modal types- Reuse code but bugs so quit this
         // typeDisplay = document.querySelector("#typeP");
         // displayType(responseTheIdPokemon.types);
 
