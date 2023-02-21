@@ -1,0 +1,282 @@
+h1 {
+    color: white;
+    text-align: center;
+}
+h2, h6{
+    color:lightgray;
+}
+
+span {
+    color: white;
+}
+
+dt, p {
+    color:rgb(55, 53, 53);
+}
+dt {
+    font-weight: normal;
+}
+/* Main page layout */
+/*****************************************************************/
+body {
+    width: 100vw;
+    height: 100vh; 
+}
+div.box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url(../20160817_113553.JPG);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#background{
+    width: 100%;
+    height: 100%;
+}
+
+div.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    width:50%;
+}
+.buttongrid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.buttongrid>.button {
+    background-color: transparent;
+    border: 1px hidden white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 20px 5px;
+    transition: background-color 0.25 ease;
+}
+.buttongrid img {
+    width: 30%;
+    height: 30%;
+}
+.buttongrid>.button {
+    margin: 2px 0;
+    width: 200px;
+    height: 200px;
+}
+.buttongrid>.button:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+@media screen and (max-width: 500px){
+    .buttongrid {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    div.content{
+        top: 20%;
+    }
+}
+/*****************************************************************/
+
+/* Counselling page layout */
+/*****************************************************************/
+div.title, div.intro, div.help, div.contact {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+div.title{
+    background-color:dodgerblue;
+    background-image: url(../IMG_3136.jpg);
+}
+div.specialty, div.counselling, div.psychotherapy, div.couple_therapy{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    position: absolute;
+    top: 20%;
+}
+div.specialty{
+    left: 70%;
+}
+div.counselling{
+    left: 5%;
+    right: 60%;
+}
+div.psychotherapy{
+    top: 30%;
+    left: 25%;
+    width:50%;
+}
+div.couple_therapy{
+    top: 10%;
+    right:45%;
+    left:5%;
+}
+div.footer{
+    position:relative;
+    background-color:dodgerblue;
+    background-size: 100%;
+    text-align: center;
+    padding:5px;
+}
+div.intro {    
+    background-image: url(../IMG_2133.jpg);
+    background-color: rgb(195, 232, 208);
+}
+div.help {
+    background-image: url(../IMG_2383.jpg);
+    background-color: aliceblue;
+}
+div.contact {
+    background-image: url(../IMG_3713.jpg);
+    background-color: lightgoldenrodyellow;   
+}
+
+#IMG_3136{
+    width:70%;
+}
+
+#IMG_2133{
+    width: 50%;
+    position:relative;
+    left: 50%;
+}
+#IMG_2383{
+    opacity: 80%;
+    width: 100%;
+    
+}
+#IMG_3713{
+    width:60%;
+    position:relative;
+    left: 40%;
+    opacity: 70%;
+    
+}
+div.psychotherapy>p{
+    color:white;
+}
+@media screen and (max-width: 500px){
+    #IMG_3713,#IMG_23833, #IMG_2133,#IMG_3136{
+        width:100%;
+        position:relative;
+        left:0px;
+    }
+    div.specialty, div.counselling, div.psychotherapy, div.couple_therapy{
+        top: 20%;
+        left:5%;
+        width:80%;
+    }
+    div.specialty>p, div.counselling>p, div.psychotherapy>p, div.couple_therapy>p, dt{
+        font-size: 50%;
+    }  
+}
+/*****************************************************************/
+
+/* Counselling_Mandarin page layout */
+/*****************************************************************/
+div.title, div.intro, div.help, div.contact {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+div.title{
+    background-color:dodgerblue;
+    background-image: url(../IMG_3136.jpg);
+}
+div.specialty, div.counselling, div.psychotherapy, div.couple_therapy{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    position: absolute;
+    top: 20%;
+}
+div.specialty{
+    left: 70%;
+}
+div.counselling{
+    left: 5%;
+    right: 60%;
+}
+div.psychotherapy{
+    top: 30%;
+    left: 25%;
+    width:50%;
+}
+div.couple_therapy{
+    top: 10%;
+    right:45%;
+    left:5%;
+}
+div.footer{
+    position:relative;
+    background-color:dodgerblue;
+    background-size: 100%;
+    text-align: center;
+    padding:5px;
+}
+div.intro {    
+    background-image: url(../IMG_2133.jpg);
+    background-color: rgb(195, 232, 208);
+}
+div.help {
+    background-image: url(../IMG_2383.jpg);
+    background-color: aliceblue;
+}
+div.contact {
+    background-image: url(../IMG_3713.jpg);
+    background-color: lightgoldenrodyellow;   
+}
+
+#IMG_3136{
+    width:70%;
+}
+
+#IMG_2133{
+    width: 50%;
+    position:relative;
+    left: 50%;
+}
+#IMG_2383{
+    opacity: 80%;
+    width: 100%;
+    
+}
+#IMG_3713{
+    width:60%;
+    position:relative;
+    left: 40%;
+    opacity: 70%;
+    
+}
+div.psychotherapy>p{
+    color:white;
+}
+@media screen and (max-width: 500px){
+    #IMG_3713,#IMG_23833, #IMG_2133,#IMG_3136{
+        width:100%;
+        position:relative;
+        left:0px;
+    }
+    div.specialty, div.counselling, div.psychotherapy, div.couple_therapy{
+        top: 20%;
+        left:5%;
+        width:80%;
+    }
+    div.specialty>p, div.counselling>p, div.psychotherapy>p, div.couple_therapy>p, dt{
+        font-size: 50%;
+    }  
+}
+/*****************************************************************/
