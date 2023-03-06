@@ -1,0 +1,121 @@
+h1 {
+    color: white;
+    text-align: center;
+}
+h2, h6{
+    color:lightgray;
+}
+
+span {
+    color: white;
+}
+dt, p {
+    color:rgb(55, 53, 53);
+}
+dt {
+    font-weight: normal;
+}
+
+/* Counselling page layout */
+/*****************************************************************/
+div.title, div.intro, div.help, div.contact {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+div.title{
+    background-color:dodgerblue;
+}
+div.intro {    
+    background-color: rgb(195, 232, 208);
+}
+div.help {
+    background-color: rgb(229, 216, 239);
+}
+div.contact {
+    background-color: skyblue;  
+    box-sizing: content-box; 
+}
+div.specialty, div.counselling, div.psychotherapy, div.couple_therapy{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    position: absolute;
+    
+    z-index: 2;
+}
+div.specialty{
+    top: 10%;
+    padding-left:3%;
+    left: 70%;
+}
+div.counselling{
+    top: 20%;
+    left: 5%;
+    right: 60%;
+}
+div.psychotherapy{
+    top: 30%;
+    left: 25%;
+    width:50%;
+}
+div.couple_therapy{
+    top: 1%;
+    right:60%;
+    left:1%;
+    
+}
+div.title>img{
+    width:70%;
+}
+div.intro>img{
+    width: 50%;
+    position:relative;
+    left: 50%;
+}
+div.help>img{
+    opacity: 80%;
+    width: 100%;
+    z-index: 1;
+    
+}
+div.contact>img{
+    width:60%;
+    position:relative;
+    left: 40%;
+    opacity: 80%;
+    z-index: 1;
+    
+}
+div.psychotherapy>p{
+    color:white;
+}
+div.footerSudo{
+    position:relative;
+    
+}
+div.footer{
+    width:100%;
+    background-color:dodgerblue;
+    background-size: 100%;
+    position: absolute;
+    padding:5px;
+    text-align: center;
+}
+@media screen and (max-width: 1150px){
+    div.title>img,div.intro>img,div.help>img,div.contact>img{
+        width:100%;
+        position:relative;
+        left:0px;
+    }
+    div.specialty, div.counselling, div.psychotherapy, div.couple_therapy{
+        top: 20%;
+        left:5%;
+        width:80%;
+    }
+    /* div.specialty>p, div.counselling>p, div.psychotherapy>p, div.couple_therapy>p, dt{
+        font-size: 50%;
+    }   */
+}
+/*****************************************************************/
