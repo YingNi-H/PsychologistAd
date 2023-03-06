@@ -1,0 +1,29 @@
+<link rel="stylesheet" type="text/css" href="./css/tables.css">
+<div class="message_box">
+    <table>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>phone</th>
+            <th>email</th>
+            <th>introduction</th>
+            <th>timestamp</th>
+        </tr>
+    <tbody>
+    {{#each messages}}
+    
+    <tr>
+    <td>{{this.id}}</td>
+    
+    <td>{{this.name}}</td>
+    <td>{{this.phone}}</td>
+    <td>{{this.email}}</td>
+    <td>{{this.introduction}}</td>
+    <td>{{this.timestamp}}</td>
+    </tr>
+    {{/each}}
+    </tbody>
+    
+    </table>
+
+</div>

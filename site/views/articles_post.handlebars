@@ -1,0 +1,25 @@
+
+<form action="./uploadImage" method="POST" enctype="multipart/form-data">
+ <fieldset>
+            {{#if toastMessage}}
+            <p>{{toastMessage}}</p>
+            {{/if}}
+   
+             <p>
+                <label for="me">Title</label><br>
+                 <input type="name" name="title" id="name" placeholder="title" size="40"><br><br>
+            </p>
+            <p>
+                <label for="inpFile">Upload an image here!</label>
+                 <input id="inpFile" type="file" name="image" accept=".png,.jpg,.jpeg,.bmp" size="40"><br><br>
+            </p>
+             <p>
+                <label for="me">Content</label><br>
+                <textarea id="me" name="content" placeholder="article" rows="20" cols="100" ></textarea>
+            </p>
+            <button type="submit">Submit</button> 
+
+        </fieldset>
+        </form>
+
+</form>

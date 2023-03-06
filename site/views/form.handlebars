@@ -1,0 +1,77 @@
+   <link rel="stylesheet" type="text/css" href="./css/form.css">
+        <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+         <div class="container-fluid">
+                <ul class="navbar-nav text-white">
+                    <li class="nav-item">
+                        <div class="" >
+                        <p>Ying-Ni Huang Counselling Psychologist</p>
+                        <p>黃盈霓諮商心理師</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="collapse navbar-collapse justify-content-end">
+                    <ul class="navbar-nav text-white">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./counselling">Counselling</a>
+                    </li>
+                
+                    <li class="nav-item float-end">
+                        <a class="nav-link" href="./counselling_mandarin">中文諮商</a>
+                    </li>
+                    <li class="nav-item float-end">
+                        <a class="nav-link" href="./articles">Blog</a>
+                    </li>
+                </ul>
+                </div>
+                    
+               
+            </div>
+             </div>
+          </nav>
+   
+
+         <script src="./js/form.js"></script>
+         <script src="./data/content_form.js"></script>
+<div class="title"></div>
+
+         
+    <form action="./client_enquiries" method="POST">
+    <h2>Enquire Counselling</h2>
+        <fieldset>
+            {{#if toastMessage}}
+            <p>{{toastMessage}}</p>
+            {{/if}}
+   
+             <p>
+                <label for="me">Your Name</label><br>
+                 <input type="name" name="name" id="name" placeholder="Your name please" size="40"><br><br>
+            </p>
+             <p>
+                <label for="me">Email</label><br>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" size="40"><br><br>
+            </p>
+             <p>
+                <label for="me">Phone Number</label><br>
+                <input type="phone" id="phone" name="phone" placeholder="Enter your phone number" size="40"><br><br>
+            </p>
+             <p>
+                <label for="me">Please breifly descibe your issues here..</label><br>
+                <textarea id="me" name="memo" placeholder="Anything you wanna say....." rows="15" cols="80" ></textarea>
+            </p>
+            <button type="submit">Submit</button> 
+
+        </fieldset>
+        </form>
+        
+
+        <div class="footerSudo">
+        <div class="footer">
+            <p>©2023 by Ying-Ni Huang.</p>
+         </div>
+         </div>
+        
+        

@@ -1,0 +1,89 @@
+h1 {
+    color: white;
+    text-align: center;
+}
+h2, h6{
+    color:gray;
+}
+
+span {
+    color: white;
+}
+dt, p {
+    color:rgb(55, 53, 53);
+}
+dt {
+    font-weight: normal;
+}
+
+/* Form_self-introduction page layout-originl */
+/*****************************************************************/
+div.title{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    background-color:silver;
+    
+}
+div.middle{
+    width:50%;
+    background-repeat: no-repeat;
+    background-size:cover;
+    margin-right: 1%;
+    
+}
+.middle>img{
+    width:100%;
+    height: 100%;
+}
+div.specialty{
+    background-color:silver;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    background-size: cover;
+    padding:3%;
+    width:50%;
+    
+}
+form{
+    background-color: aliceblue;
+    padding: 10%;
+}
+
+div.footerSudo{
+    position:relative;
+    
+}
+div.footer{
+    width:100%;
+    background-color:dodgerblue;
+    background-size: 100%;
+    position: absolute;
+    padding:5px;
+    text-align: center;
+}
+
+@media screen and (max-width: 920px){
+    div.title>img{
+        width:100%;
+        position:relative;
+        left:0px;
+        
+    }
+    div.specialty{
+        top: 20%;
+        left:5%;
+        width:80%;
+        z-index: 2;
+    }
+    div.specialty>h2, p, dt{
+        
+        color: white;
+    }  
+}
+
+/*****************************************************************/
+

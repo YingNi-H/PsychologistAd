@@ -1,0 +1,47 @@
+<link rel="stylesheet" type="text/css" href="./css/articles.css">
+        <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+         <div class="container-fluid">
+                <ul class="navbar-nav text-white">
+                    <li class="nav-item">
+                        <div class="" >
+                        <p>Ying-Ni Huang Counselling Psychologist</p>
+                        <p>黃盈霓諮商心理師</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="collapse navbar-collapse justify-content-end">
+                    <ul class="navbar-nav text-white">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./counselling">Counselling</a>
+                    </li>
+
+                    <li class="nav-item float-end">
+                        <a class="nav-link" href="./counselling_mandarin">中文諮商</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./form">About me &amp; Contact</a>
+                    </li>
+                    
+                </ul>
+                </div>
+                    
+               
+            </div>
+             </div>
+          </nav>
+<div class="container">
+{{#each articles}}
+<div class="article">
+<h2>{{this.title}}</h2>
+<img src="./uploadedFiles/{{this.image}}">
+<div class="text">{{{this.content}}}</div>
+</div>
+{{/each}}
+</div>
+
+<div class="footerSudo">
+        <div class="footer">
+            <p>©2023 by Ying-Ni Huang.</p>
+         </div>
+         </div>
